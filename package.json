@@ -1,7 +1,7 @@
 {
   "name": "discord.js-selfbot-alex",
-  "version": "1.2.4",
-  "description": "A simple module help you to make automoderation very easily",
+  "version": "1.2.5",
+  "description": "A simple module help you to online selfbot very easily",
   "main": "alex.js",
   "scripts": {
     "start": "node alex.js"
