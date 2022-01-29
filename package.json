@@ -14,7 +14,7 @@
     "discord",
     "selfbot",
     "module",
-    "discord.js"
+    "discord.js-selfbot"
   ],
   "author": "Alex",
   "license": "MIT",
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/Alex-724/discord.js-selfbot-alex#readme",
   "dependencies": {
-    "discord.js": "^12.3.1"
+    "discord.js-selfbot": "^12.0.2"
   }
 }
