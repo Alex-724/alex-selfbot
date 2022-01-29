@@ -29,7 +29,7 @@ async function setStatus(statu) {
 async function start(data) {
   const TOKEN = data.token,
     STATUS = data.status,
-    CHANNEL_ID = channel_id;
+    CHANNEL_ID = data.channel_id;
   ////////////////////////////////////////////////////////////////////////////////
   const alex = new Discord.Client();
   if (!TOKEN) return console.error("You need to type token")
