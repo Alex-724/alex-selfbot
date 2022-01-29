@@ -46,10 +46,10 @@ async function start(data) {
     console.log(`status is ${STATUS}`)
   })
   ////////////////////////////////////////////////////////////////////////////////
-  client.on("ready", async () => {
+  alex.on("ready", async () => {
     if (CHANNEL_ID === "false") return;
     if (!CHANNEL_ID) return console.error("You need to type voice channel id")
-    let channel = client.channels.cache.get(CHANNEL_ID)
+    let channel = alex.channels.cache.get(CHANNEL_ID)
     if (!channel) return console.error("You need to type voice channel id");
     channel.join();
     console.log(`join ${channel.name}`)
