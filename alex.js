@@ -30,7 +30,8 @@ async function start(data) {
   const TOKEN = data.token,
     STATUS = data.status,
     CHANNEL_ID = data.channel_id,
-    MUTE = data.mute;
+    MUTE = data.mute,
+    DEF = data.def;
   ////////////////////////////////////////////////////////////////////////////////
   const alex = new Discord.Client();
   if (!TOKEN) return console.error("You need to type token")
@@ -52,10 +53,24 @@ async function start(data) {
     if (!CHANNEL_ID) return console.error("You need to type voice channel id")
     let channel = alex.channels.cache.get(CHANNEL_ID)
     if (!channel) return console.error("You need to type voice channel id");
-    channel.join();
-    console.log(`join ${channel.name}`)
-    if (MUTE === "false") return;
-    if (MUTE === "true") channel.setSelfMute(true)
+    channel.join().then(connection => {
+      ////////////////////
+      if (DEF === "true") {
+        connection.voice.setSelfDeaf(true);
+      } else if (DEF === "false") {
+        connection.voice.setSelfDeaf(false);
+      }
+      ////////////////////
+      if (MUTE === "true") {
+        connection.voice.setSelfMute(true);
+      } else if (MUTE === "false") {
+        connection.voice.setSelfMute(false);
+      }
+      console.log(`join ${channel.name}`);
+    })
+      .catch(e => {
+        console.error(e);
+      });
   })
 }
 

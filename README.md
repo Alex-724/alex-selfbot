@@ -20,6 +20,7 @@ Alex.start({
     status: "idle", // You need to type account statues here if you don't need type "false"
     channel_id: "12345678" // You need to type voice channel id here if you don't need type "false"
     mute: "true" // you can add self mute if you don't need type "false"
+    def: "true" // you can add self defend if you don't need type "false"
 })
 ```
 
