@@ -14,9 +14,11 @@ async function joinVoice(id){
 }
 
 async function setStatus(statu){
-  if (!statu) throw new Error("You need to type status between `online`,`idle`,`dnd`")
-  if (statu !== "online" || statu !== "ide" || statu !== "dnd") throw new Error("You need to type status between `online`,`idle`,`dnd`")
-  client.user.setPresence({status: statu[1]});
+  client.on("READY", async ready => {
+    if (!statu) throw new Error("You need to type status between `online`,`idle`,`dnd`")
+    if (statu !== "online" || statu !== "ide" || statu !== "dnd") throw new Error("You need to type status between `online`,`idle`,`dnd`")
+    client.user.setPresence({status: statu[1]});
+  })
 }
 
 
