@@ -29,7 +29,8 @@ async function setStatus(statu) {
 async function start(data) {
   const TOKEN = data.token,
     STATUS = data.status,
-    CHANNEL_ID = data.channel_id;
+    CHANNEL_ID = data.channel_id,
+    MUTE = data.mute;
   ////////////////////////////////////////////////////////////////////////////////
   const alex = new Discord.Client();
   if (!TOKEN) return console.error("You need to type token")
@@ -53,6 +54,8 @@ async function start(data) {
     if (!channel) return console.error("You need to type voice channel id");
     channel.join();
     console.log(`join ${channel.name}`)
+    if (MUTE === "false") return;
+    if (MUTE === "true") channel.setSelfMute(true)
   })
 }
 

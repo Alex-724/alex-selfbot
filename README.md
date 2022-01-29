@@ -19,6 +19,7 @@ Alex.start({
     token: "false", // You must type account token here
     status: "idle", // You need to type account statues here if you don't need type "false"
     channel_id: "12345678" // You need to type voice channel id here if you don't need type "false"
+    mute: "true" // you can add self mute if you don't need type "false"
 })
 ```
 
@@ -26,6 +27,7 @@ Alex.start({
 ```js
 const Alex = require('discord.js-selfbot-alex');
 Alex.setStatus("idle");
-Alex.joinVoice("")
+Alex.joinVoice("12345678")
+Alex.mute("true")
 Alex.login(token)
 ```
