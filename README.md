@@ -8,7 +8,7 @@ npm i djs-selfbot-alex
 const Alex = require('djs-selfbot-alex')
 ```
 
-## Initialising (Mandatory)
+## Login (Token)
 ```js
 Alex.login(token)
 ```
