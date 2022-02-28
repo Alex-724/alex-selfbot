@@ -33,10 +33,10 @@ async function start(data) {
     STATUS = data.status,
     CHANNEL_ID = data.channel_id,
     MUTE = data.mute,
-    DEF = data.def,
-    AKF = data.akf,
-    AKF_DM_MESSAGE = data.akf_dm_message,
-    AKF_GUILD_MESSAGE = data.akf_guild_message;
+    DEF = data.def
+    // AKF = data.akf,
+    // AKF_DM_MESSAGE = data.akf_dm_message,
+    // AKF_GUILD_MESSAGE = data.akf_guild_message;
   ////////////////////////////////////////////////////////////////////////////////
   const alex = new Discord.Client();
   if (!TOKEN) return console.error("You need to type token")
@@ -90,33 +90,33 @@ async function start(data) {
       });
   });
   ////////////////////////////////////////////////////////////////////////////////
-  alex.on("message", async (message) => {
-    if (!AKF || AKF !== "true") return;
-    if (!message.guild) {
-      if (!AKF_DM_MESSAGE || AKF_DM_MESSAGE !== "true"|| message.author.id === alex.id) return;
-      message.reply(`AKF: ${AKF_DM_MESSAGE}`).catch((error) => {});
-    } else if (message.guild) {
-      if (!AKF_GUILD_MESSAGE || AKF_GUILD_MESSAGE !== "true") return;
-      message.reply(`AKF: ${AKF_GUILD_MESSAGE}`).catch((error) => {});
-    } else {
-      return console.error("something went wrong in my code");
-    }
-  });
-  alex.on("ready", async () => {
-    if (!AKF || AKF !== "true") return;
-    if (AKF_DM_MESSAGE || AKF_DM_MESSAGE === "true") {
-      msssg +=
-        `[🟢] You have enabled akf dm message and the message is ${AKF_DM_MESSAGE}` +
-        newLine;
-    } else if (AKF_GUILD_MESSAGE || AKF_GUILD_MESSAGE === "true") {
-      msssg +=
-        `[🟢] You have enabled akf guild message and the message is ${AKF_GUILD_MESSAGE}` +
-        newLine;
-    }
-  });
-  alex.on("ready", async () => {
-    console.log(msssg);
-  });
+  // alex.on("message", async (message) => {
+  //   if (!AKF || AKF !== "true") return;
+  //   if (!message.guild) {
+  //     if (!AKF_DM_MESSAGE || AKF_DM_MESSAGE !== "true"|| message.author.id === alex.id) return;
+  //     message.reply(`AKF: ${AKF_DM_MESSAGE}`).catch((error) => {});
+  //   } else if (message.guild) {
+  //     if (!AKF_GUILD_MESSAGE || AKF_GUILD_MESSAGE !== "true") return;
+  //     message.reply(`AKF: ${AKF_GUILD_MESSAGE}`).catch((error) => {});
+  //   } else {
+  //     return console.error("something went wrong in my code");
+  //   }
+  // });
+  // alex.on("ready", async () => {
+  //   if (!AKF || AKF !== "true") return;
+  //   if (AKF_DM_MESSAGE || AKF_DM_MESSAGE === "true") {
+  //     msssg +=
+  //       `[🟢] You have enabled akf dm message and the message is ${AKF_DM_MESSAGE}` +
+  //       newLine;
+  //   } else if (AKF_GUILD_MESSAGE || AKF_GUILD_MESSAGE === "true") {
+  //     msssg +=
+  //       `[🟢] You have enabled akf guild message and the message is ${AKF_GUILD_MESSAGE}` +
+  //       newLine;
+  //   }
+  // });
+  // alex.on("ready", async () => {
+  //   console.log(msssg);
+  // });
 }
 
 
