@@ -1,5 +1,4 @@
 const Discord = require("discord.js-selfbot")
-const main_client = new Discord.Client();
 const newLine = "\n";
 async function login(token) {
   const client = new Discord.Client();

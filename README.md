@@ -1,11 +1,11 @@
 ## Installation
 ```txt
-npm i discord.js-selfbot-alex
+npm i alex-selfbot
 ```
 
 ## Delcaration
 ```js
-const Alex = require('discord.js-selfbot-alex')
+const Alex = require('alex-selfbot')
 ```
 
 ## Login (Token)
@@ -15,7 +15,7 @@ Alex.login(token)
 
 ## Fast Demo
 ```js
-const Alex = require('discord.js-selfbot-alex');
+const Alex = require('alex-selfbot');
 Alex.start({
     token: "false", // You must type account token here
     status: "idle", // You need to type account statues here if you don't need it type "false"
@@ -27,7 +27,7 @@ Alex.start({
 
 ## Code Demo
 ```js
-const Alex = require('discord.js-selfbot-alex');
+const Alex = require('alex-selfbot');
 Alex.setStatus("idle");
 Alex.joinVoice("12345678")
 Alex.login(token)

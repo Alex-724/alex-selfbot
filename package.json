@@ -1,5 +1,5 @@
 {
-  "name": "discord.js-selfbot-alex",
+  "name": "alex-selfbot",
   "version": "1.5.0",
   "description": "A simple module help you to online selfbot very easily",
   "main": "alex.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alex-724/discord.js-selfbot-alex_EXAMPLE.git"
+    "url": "git+https://github.com/Alex-724/alex-selfbot_EXAMPLE.git"
   },
   "keywords": [
     "discord",
@@ -19,9 +19,9 @@
   "author": "Alex",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Alex-724/discord.js-selfbot-alex_EXAMPLE/issues"
+    "url": "https://github.com/Alex-724/alex-selfbot_EXAMPLE/issues"
   },
-  "homepage": "https://github.com/Alex-724/discord.js-selfbot-alex_EXAMPLE#readme",
+  "homepage": "https://github.com/Alex-724/alex-selfbot_EXAMPLE#readme",
   "dependencies": {
     "discord.js-selfbot": "^12.0.2"
   }
